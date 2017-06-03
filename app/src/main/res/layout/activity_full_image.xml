@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/imageBackground">
+
+    <android.support.v4.view.ViewPager
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/full_image_view_pager"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:fitsSystemWindows="true"
+        android:background="#66000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect"
+            android:text="@string/button_feedback"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/button_rate_it"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect"
+            android:text="@string/button_rate"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_above="@+id/setSaveButtons"
+        android:id="@+id/adViewBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/ad_fullImage_bottom_banner">
+    </com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:id="@id/setSaveButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#66000000"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_save_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="@string/button_save"/>
+
+        <Button
+            android:id="@+id/button_set_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="@string/button_set"/>
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/viewSnack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"/>
+
+</RelativeLayout>

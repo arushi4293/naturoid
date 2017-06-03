@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Naturoid</string>
+    <string name="package_name">com.mapank.android.naturoid</string>
+
+    <string name="feedback_email_id">noob@mapank.com</string>
+    <string name="feedback_subject">Feedback %1$s :</string>
+    <string name="feedback_text">Dear &#8230; ,</string>
+    <string name="feedback_chooser_text">Send Feedback:</string>
+
+    <string name="appRater_title">Rate %1$s</string>
+    <string name="appRater_please">If you enjoy using %1$s , please take a moment to rate it. Thanks for your support!</string>
+    <string name="appRater_remind_later">Remind me later</string>
+    <string name="appRater_no_thanks">No Thanks!!</string>
+
+    <string name="content_desc_full_image">wallpaper</string>
+
+    <string name="button_set">SET AS WALLPAPER</string>
+    <string name="button_save">DOWNLOAD</string>
+
+    <string name="button_feedback">FEEDBACK</string>
+    <string name="button_rate">RATE THE APP</string>
+
+    <string name="permission_request_desc">We need access to your device storage in order to save wallpapers on your device.</string>
+    <string name="permission_request_settings_desc">We need access to your device storage in order to save wallpapers on your device.\n\n<b>Open Settings</b>, then tap Permissions and turn on Storage.</string>
+    <string name="permission_request_cancelled">Storage permission is needed to save wallpaper in Gallery.</string>
+    <string name="permission_request_denied">Storage permission was not granted.</string>
+    <string name="permission_request_grant">GRANT</string>
+    <string name="permission_request_open_settings">Open Settings</string>
+
+    <string name="wallpaper_set">wallpaper has set !! :)</string>
+    <string name="wallpaper_saved">wallpaper has saved !! :)</string>
+    <string name="storage_not_avl">Storage is not avialble :(</string>
+    <string name="problem">Some Problem :(</string>
+
+    <string name="SHARED_PREF_IS_FIRST_TIME_ASK_PERMISSION">com.mapank.android.naturoid.IS_FIRST_TIME_ASK_PERMISSION</string>
+
+    <string name="ad_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ad_thumnail_bottom_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_fullImage_bottom_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_fullImage_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_native_express">ca-app-pub-3940256099942544/1072772517</string>
+</resources>
