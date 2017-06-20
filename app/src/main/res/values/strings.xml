@@ -29,14 +29,14 @@
 
     <string name="wallpaper_set">wallpaper has set !! :)</string>
     <string name="wallpaper_saved">wallpaper has saved !! :)</string>
-    <string name="storage_not_avl">Storage is not avialble :(</string>
+    <string name="storage_not_avl">Storage is not available :(</string>
     <string name="problem">Some Problem :(</string>
 
     <string name="SHARED_PREF_IS_FIRST_TIME_ASK_PERMISSION">com.mapank.android.naturoid.IS_FIRST_TIME_ASK_PERMISSION</string>
 
-    <string name="ad_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="ad_thumnail_bottom_banner">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ad_fullImage_bottom_banner">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ad_fullImage_interstitial">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="ad_native_express">ca-app-pub-3940256099942544/1072772517</string>
+    <string name="ad_app_id">ca-app-pub-9557687982771303~3659949390</string>
+    <string name="ad_thumnail_bottom_banner">ca-app-pub-9557687982771303/8090148999</string>
+    <string name="ad_fullImage_bottom_banner">ca-app-pub-9557687982771303/9566882199</string>
+    <string name="ad_fullImage_interstitial">ca-app-pub-9557687982771303/3520348596</string>
+    <string name="ad_native_express">ca-app-pub-9557687982771303/6473814998</string>
 </resources>

@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="splashBackground">#E0E0E0</color>
+    <color name="splashBackground">#33691E</color>
     <color name="imageBackground">#212121</color>
     <color name="playColor">#42000000</color>
 </resources>

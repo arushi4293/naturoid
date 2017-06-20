@@ -14,8 +14,6 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.NativeExpressAdView;
-import com.mapank.android.naturoid.helper.Methods;
-import com.mapank.android.naturoid.helper.AppRater;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,18 +45,18 @@ public class ThumbnailActivity extends AppCompatActivity {
         mAdViewBannerBottom = (AdView) findViewById(R.id.adViewBanner);
         mRecyclerView = (RecyclerView) findViewById(R.id.thumbnailsRecyclerView);
 
-        initViews();
         initAds();
+        initViews();
 
-        // if play store exist show app rater
-        if( Methods.rateIntent(this).resolveActivity(getPackageManager()) != null){
-            AppRater.app_launched(this);
-        }
+//         if play store exist show app rater
+//        if( Methods.rateIntent(this).resolveActivity(getPackageManager()) != null){
+//            AppRater.app_launched(this);
+//        }
     }
 
     private void initAds(){
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build();
         mAdViewBannerBottom.loadAd(adRequest);
 
         mAdViewBannerBottom.setAdListener(new AdListener() {
@@ -148,6 +146,7 @@ public class ThumbnailActivity extends AppCompatActivity {
                     AdSize adSize = new AdSize( adWidth, NATIVE_EXPRESS_AD_HEIGHT);
                     adView.setAdSize(adSize);
                     adView.setAdUnitId(getString(R.string.ad_native_express));
+                    adView.setVisibility(View.GONE);
                 }
 
                 loadNativeExpressAd( ITEMS_PER_AD - 1);
@@ -184,7 +183,7 @@ public class ThumbnailActivity extends AppCompatActivity {
             }
         });
 
-        adView.loadAd(new AdRequest.Builder().build());
+        adView.loadAd(new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build());
     }
 
 }

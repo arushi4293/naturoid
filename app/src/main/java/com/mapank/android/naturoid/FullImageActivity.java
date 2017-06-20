@@ -184,18 +184,18 @@ public class FullImageActivity extends AppCompatActivity {
 
     private void initAds(){
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build();
         mAdViewBanner.loadAd(adRequest);
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(getString(R.string.ad_fullImage_interstitial));
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.loadAd(new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build());
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 // Load the next interstitial.
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                mInterstitialAd.loadAd(new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build());
             }
         });
     }
