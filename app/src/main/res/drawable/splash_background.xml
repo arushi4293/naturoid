@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:drawable="@color/splashBackground"/>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/splashBackground"/>
+        </shape>
+    </item>
 
     <item>
         <bitmap
-            android:gravity="center"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/splash_launch_icon"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+    </item>
+
+    <item android:gravity="bottom">
+        <bitmap android:gravity="bottom"
+                android:src="@drawable/mapank" />
     </item>
 
 </layer-list>

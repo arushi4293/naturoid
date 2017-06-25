@@ -98,7 +98,7 @@ public class FullImageActivity extends AppCompatActivity {
                 if (Methods.havePermission(this, PERMISSION_WRITE_EXTERNAL_STORAGE)) {
                     if (
                             Methods.saveWallpaper(
-                                    ImagesLab.getInstance(this).getInputStream(mViewPager.getCurrentItem()),
+                                    ImagesLab.getInstance(this).getFullImageInputStream(mViewPager.getCurrentItem()),
                                     findViewById(R.id.viewSnack)
                             )
                             ) {
@@ -162,7 +162,7 @@ public class FullImageActivity extends AppCompatActivity {
 
                     if (
                             Methods.saveWallpaper(
-                                    ImagesLab.getInstance(this).getInputStream(mViewPager.getCurrentItem()),
+                                    ImagesLab.getInstance(this).getFullImageInputStream(mViewPager.getCurrentItem()),
                                     findViewById(R.id.viewSnack)
                             )
                             ) {
@@ -252,7 +252,7 @@ public class FullImageActivity extends AppCompatActivity {
                 if (
                         Methods.setWallpaper(
                                 FullImageActivity.this,
-                                ImagesLab.getInstance(FullImageActivity.this).getInputStream(mViewPager.getCurrentItem()),
+                                ImagesLab.getInstance(FullImageActivity.this).getFullImageInputStream(mViewPager.getCurrentItem()),
                                 findViewById(R.id.viewSnack)
                         )
                         ) {
@@ -268,7 +268,7 @@ public class FullImageActivity extends AppCompatActivity {
                 if (Methods.havePermission(FullImageActivity.this, PERMISSION_WRITE_EXTERNAL_STORAGE)) {
                     if (
                             Methods.saveWallpaper(
-                                    ImagesLab.getInstance(FullImageActivity.this).getInputStream(mViewPager.getCurrentItem()),
+                                    ImagesLab.getInstance(FullImageActivity.this).getFullImageInputStream(mViewPager.getCurrentItem()),
                                     findViewById(R.id.viewSnack)
                             )
                             ) {

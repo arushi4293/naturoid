@@ -40,7 +40,7 @@ public class FullImageFragment extends Fragment {
 
         Glide.with(getContext())
                 .load(ImagesLab.getInstance(getContext()).getFullImageUri( mWallpaperPosition))
-                .thumbnail( 0.1f )
+                .thumbnail(0.1f)
                 .into(img_full_image);
 
         return v;

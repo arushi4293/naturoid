@@ -70,7 +70,7 @@ class ThumbnailViewAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
 
     @Override
     public int getItemViewType(int position){
-        return ( position + 1 ) % ThumbnailActivity.ITEMS_PER_AD == 0 ? NATIVE_EXPRESS_AD_VIEW_TYPE
+        return position % ThumbnailActivity.ITEMS_PER_AD == 0 ? NATIVE_EXPRESS_AD_VIEW_TYPE
                 : THUMB_VIEW_TYPE;
     }
 
@@ -101,7 +101,7 @@ class ThumbnailViewAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder
                 ThumbnailViewHolder thumbnailViewHolder = (ThumbnailViewHolder) holder;
                 Glide.with(mContext)
                         .load(mImagesLab.getThumbUri( (int) mRecyclerViewItems.get(position) ))
-                        .thumbnail( 0.1f )
+                        .thumbnail(0.1f)
                         .into(thumbnailViewHolder.img_thumbnail);
                 break;
 

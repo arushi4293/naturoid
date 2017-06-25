@@ -20,7 +20,8 @@ class ImagesLab {
     private final int mThumbWidth;
     private final int mScreenWidth;
 
-    private static final String THUMBNAIL_FOLDER = "thumbnail_images";
+    //private static final String THUMBNAIL_FOLDER = "thumbnails";
+    private static final String FULL_IMAGE_FOLDER = "full";
     private static final String TAG = "ImagesLab";
 
     private static final int IMG_HEIGHT = 1920;
@@ -41,7 +42,7 @@ class ImagesLab {
         mContext = context.getApplicationContext();
 
         try {
-            mImagesNames = mContext.getAssets().list(THUMBNAIL_FOLDER);
+            mImagesNames = mContext.getAssets().list(FULL_IMAGE_FOLDER);
         }
         catch(IOException ioe){
             Log.d( TAG, ioe.toString());
@@ -64,21 +65,21 @@ class ImagesLab {
 
     String getThumbUri( int position ){
         try {
-            return "file:///android_asset/" + THUMBNAIL_FOLDER + "/" + mImagesNames[position];
+            return "file:///android_asset/" + FULL_IMAGE_FOLDER + "/" + mImagesNames[position];
         }
         catch(ArrayIndexOutOfBoundsException e) {
             Log.d( TAG, e.toString());
-            return "file:///android_asset/" + THUMBNAIL_FOLDER + "/" + mImagesNames[0];
+            return "file:///android_asset/" + FULL_IMAGE_FOLDER + "/" + mImagesNames[0];
         }
     }
 
     String getFullImageUri( int position ){
         try {
-            return "file:///android_asset/" + THUMBNAIL_FOLDER + "/" + mImagesNames[position];
+            return "file:///android_asset/" + FULL_IMAGE_FOLDER + "/" + mImagesNames[position];
         }
         catch(ArrayIndexOutOfBoundsException e) {
             Log.d( TAG, e.toString());
-            return "file:///android_asset/" + THUMBNAIL_FOLDER + "/" + mImagesNames[0];
+            return "file:///android_asset/" + FULL_IMAGE_FOLDER + "/" + mImagesNames[0];
         }
     }
 
@@ -98,9 +99,9 @@ class ImagesLab {
         return mScreenWidth;
     }
 
-    InputStream getInputStream( int position ){
+    InputStream getFullImageInputStream( int position ){
         try {
-            return mContext.getAssets().open(THUMBNAIL_FOLDER + "/" + mImagesNames[position]);
+            return mContext.getAssets().open(FULL_IMAGE_FOLDER + "/" + mImagesNames[position]);
         }
         catch(IOException e) {
             Log.d( TAG, e.toString());

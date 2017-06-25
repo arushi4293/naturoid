@@ -26,7 +26,7 @@ import com.mapank.android.naturoid.helper.ItemOffsetDecoration;
 
 public class ThumbnailActivity extends AppCompatActivity {
 
-    public static final int ITEMS_PER_AD = 10;
+    public static final int ITEMS_PER_AD = 19; // 6*3 + 1
     private static final int NATIVE_EXPRESS_AD_HEIGHT = 150;
 
     private AdView mAdViewBannerBottom;
@@ -100,7 +100,7 @@ public class ThumbnailActivity extends AppCompatActivity {
             @Override
             public int getSpanSize(int position) {
 
-                return  ( position + 1 )% ITEMS_PER_AD == 0
+                return  position % ITEMS_PER_AD == 0
                         ? ImagesLab.NO_THUMB_COL
                         : 1;
             }
@@ -126,7 +126,7 @@ public class ThumbnailActivity extends AppCompatActivity {
 
     private void addNativeExpressAds() {
 
-        for (int i = ITEMS_PER_AD - 1; i <= mRecyclerViewItems.size(); i += ITEMS_PER_AD) {
+        for (int i = 0; i <= mRecyclerViewItems.size(); i += ITEMS_PER_AD) {
             final NativeExpressAdView adView = new NativeExpressAdView( ThumbnailActivity.this);
             mRecyclerViewItems.add(i, adView);
         }
@@ -140,7 +140,7 @@ public class ThumbnailActivity extends AppCompatActivity {
                 final float scale = ThumbnailActivity
                         .this.getResources().getDisplayMetrics().density;
 
-                for (int i = ITEMS_PER_AD - 1; i <= mRecyclerViewItems.size(); i += ITEMS_PER_AD) {
+                for (int i = 0; i <= mRecyclerViewItems.size(); i += ITEMS_PER_AD) {
                     final NativeExpressAdView adView = (NativeExpressAdView) mRecyclerViewItems.get(i);
                     int adWidth = (int)(ImagesLab.getInstance(getApplicationContext()).getScreenWidth() / scale ) - 2* (int)getResources().getDimension(R.dimen.thumbnail_offset);
                     AdSize adSize = new AdSize( adWidth, NATIVE_EXPRESS_AD_HEIGHT);
@@ -149,7 +149,7 @@ public class ThumbnailActivity extends AppCompatActivity {
                     adView.setVisibility(View.GONE);
                 }
 
-                loadNativeExpressAd( ITEMS_PER_AD - 1);
+                loadNativeExpressAd( 0 );
             }
         });
     }
