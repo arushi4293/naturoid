@@ -56,7 +56,7 @@ public class ThumbnailActivity extends AppCompatActivity {
 
     private void initAds(){
 
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mAdViewBannerBottom.loadAd(adRequest);
 
         mAdViewBannerBottom.setAdListener(new AdListener() {
@@ -183,7 +183,7 @@ public class ThumbnailActivity extends AppCompatActivity {
             }
         });
 
-        adView.loadAd(new AdRequest.Builder().addTestDevice("E1AA3F8C8F2FC985939301764B643CAD").build());
+        adView.loadAd(new AdRequest.Builder().build());
     }
 
 }

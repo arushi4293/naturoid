@@ -86,7 +86,7 @@ public class Methods {
             return false;
         }
 
-        File file = new File(getAlbumStorageDir("god"), UUID.randomUUID() + ".jpg");
+        File file = new File(getAlbumStorageDir("naturoid"), UUID.randomUUID() + ".jpg");
 
 
         //InputStream in = null;
